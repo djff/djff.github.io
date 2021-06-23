@@ -1,0 +1,49 @@
+body{
+	margin: 0;
+	padding: 0 5%;
+	font-size: 100%;
+	color: #FFFFFF;
+	line-height: 1.5;
+	background-color: #001f3f;
+}
+
+h1, h3{
+	color: yellow;
+	font-family: "Bradley Hand", cursive, sans-serif;
+}
+
+a:link{
+	color: red;
+	text-decoration: none;
+}
+
+a:visited{
+	color: green;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+a::after{
+	content: "→";
+	color: green;
+}
+
+#validator a::after{
+	content: "";
+}
+
+#friend-fact p::before {
+	content: "→";
+}
+
+p > img{
+	padding: 20px;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+
+
+
