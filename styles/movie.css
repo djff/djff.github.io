@@ -88,6 +88,12 @@ body{
 
 /* class styling */
 .comment{
+	padding: 10;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.comment p:first-child{
 	padding: 8px;
 	margin-top: 20px;
 	font-weight: bold;
@@ -95,8 +101,12 @@ body{
 	border: 2px solid gray;
 	background-color: #E8DC9B;
 	min-height: 20px;
-    page-break-inside: avoid;
-    break-inside: avoid;
+}
+
+
+
+#critics-container div{
+	margin-top: 20px;
 }
 
 /* tag element styling */
