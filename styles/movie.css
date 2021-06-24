@@ -7,7 +7,6 @@ body{
 	background-image: url("../img/review/background.png");
 }
 
-
 /* id stylings */
 #banner{
 	position: fixed;
@@ -43,7 +42,6 @@ body{
 
 #container-left{
 	width: 68.75%;
-	max-width: 100%;
 }
 
 #rotten-container{
@@ -53,14 +51,15 @@ body{
 	background-repeat: repeat-x;
 }
 
-#rotten-container span{
+#rotten-container img{
 	vertical-align: top;
 }
 
 #critics-container{
 	column-count: 2;
+	column-gap: 2%;
 	margin: 0 2% 0 2%;
-	overflow: scroll;
+	overflow: auto;
 }
 
 #content-bottom{
@@ -88,7 +87,7 @@ body{
 
 /* class styling */
 .comment{
-	padding: 10;
+	padding: 1px;
     page-break-inside: avoid;
     break-inside: avoid;
 }
@@ -105,10 +104,6 @@ body{
 
 
 
-#critics-container div{
-	margin-top: 20px;
-}
-
 /* tag element styling */
 h1 {
 	padding-top: 50px;
@@ -121,8 +116,6 @@ h1 {
 p img{
 	float: left;
 	margin-right: 5px;
-	width: 22px;
-	height: 20px;
 }
 
 dl{
