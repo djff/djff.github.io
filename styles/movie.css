@@ -49,9 +49,12 @@ body{
 #rotten-container{
 	color: red;
 	font-size: 48pt;
-	vertical-align: top;
 	background-image: url(../img/review/rbg.png);
 	background-repeat: repeat-x;
+}
+
+#rotten-container span{
+	vertical-align: top;
 }
 
 #critics-container{
@@ -61,6 +64,7 @@ body{
 }
 
 #content-bottom{
+	margin: 0;
 	padding: 5px;
 	position: absolute;
 	bottom: 0;
@@ -74,6 +78,7 @@ body{
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	opacity: 0.5;
 }
 
 #validator a{
@@ -122,6 +127,7 @@ dt{
 }
 
 dd ul{
+	margin: 0;
 	padding: 0;
 	list-style: none;
 }
