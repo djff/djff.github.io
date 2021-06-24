@@ -95,7 +95,6 @@ body{
 	border: 2px solid gray;
 	background-color: #E8DC9B;
 	min-height: 20px;
-	-webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
 }
