@@ -5,18 +5,12 @@ body{
 	padding: 0;
 	font-size: 100%;
 	display: grid;
-	grid-template-columns: 100%;
+	/*grid-template-columns: 100%;*/
 	grid-template-rows: 80px 300px 80px;
-	grid-template-areas: "hd" 
-						 "ct" 
-						 "ft";
 	font-family: Arial, sans-serif;
 }
 
 /* id styles definitions */
-#content{
-	grid-area: ct;
-}
 
 #menu{
 	color: white;
@@ -47,6 +41,7 @@ body{
 
 #columns div:nth-child(2){
 	flex: 40%;
+	flex-grow: 3;
 	background-color: #c7c7c9;
 }
 
@@ -58,14 +53,12 @@ body{
 header{
 	text-align: center;
 	background-color: #b4dbe0;
-	grid-area: hd;
 }
 
 footer{
 	color: white;
 	text-align: center;
 	background-color: #40594b;
-	grid-area: ft;
 }
 
 /* media device definitions */
