@@ -83,6 +83,7 @@ function myFunctionTest(expected, found) {
   }
 }
 
+// Logging the tests results into the console
 console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
 console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
 console.log("Expected output of isVowel('c') is false " + myFunctionTest(false, isVowel('c')));
@@ -96,7 +97,14 @@ console.log("Expected output of b is [10, 30, 50, 30, 30] " + myFunctionTest([10
 console.log("Expected output of c is [3, 3, 3] " + myFunctionTest([3, 3, 3].join(""), c.join("")));
 console.log("Expected output of d is 135 " + myFunctionTest(135, d));
 
+// this assertion will succeed and nothing will be logged.
+console.assert([10, 30, 50, 30, 30].join("")===b.join(""));
 
+// this assertion will fail and an assertion failed will appear.
+console.assert(true === isVowel("b"), {char: "b", msg: "b is not a vowel"});
+
+
+// displaying the test results on the browser.
 document.writeln("<span> Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)) + "</span><br />");
 document.writeln("<span> Expected output of isVowel('c') is false " + myFunctionTest(false, isVowel('c')) + "</span><br/>");
 document.writeln("<span> Expected output of isVowel('a') is true " + myFunctionTest(true, isVowel('a')) + "</span><br/>");
@@ -113,7 +121,6 @@ document.writeln("<span> Expected output of d is 135 " + myFunctionTest(135, d) 
 // Add some styling to the output using js
 let spans = document.getElementsByTagName("span");
 Array.from(spans).forEach(element => {
-	console.log(element);
 	element.style.display = "block";
 	element.style.padding = "10px";
 	element.style.marginTop = "10px";
