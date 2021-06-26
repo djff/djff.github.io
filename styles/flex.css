@@ -15,12 +15,12 @@ body{
 #menu{
 	color: white;
 	background-color: #40594b;
+	display: flex;
 }
 
 #menu span{
 	padding: 15px;
 	border-right: 1.5px solid black;
-	display: inline-block;
 }
 
 #columns{
