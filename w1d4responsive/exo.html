@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#container{
+			display: grid;
+			grid-template-columns: 200px 400px;
+			grid-template-rows: 150px;
+		}
+
+		#main-left{
+			background-color: red;
+		}
+
+		#main-right{
+			display: grid;
+			grid-template-rows: 75px 75px;
+		}
+
+		#main-right div:nth-child(1){
+			background-color: green;
+		}
+
+		#bottom{
+			display: grid;
+			grid-template-columns: 200px 200px;
+
+		}
+
+		#bottom div:nth-child(1){
+			background-color: yellow;
+		}
+
+		#bottom div:nth-child(2){
+			background-color: red;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div id="container">
+		<div id="main-left	">
+			Some
+		</div>
+		<div id="main-right">
+			<div>text</div>
+			<div id="bottom">
+				<div>here</div>
+				<div>there</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
