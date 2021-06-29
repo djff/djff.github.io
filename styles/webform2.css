@@ -1,0 +1,83 @@
+body{
+	font-size: 100%;
+	font-family: Arial, sans-serif;
+}
+section{
+	margin: auto;
+	width: 70%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "h h" "left right";
+}
+section h3{
+	grid-area: h;
+	color: gray;
+	padding: 30px 0;
+	font-size: 30pt;
+	font-weight: normal;
+}
+
+nav{
+	color: white;
+	display: grid;
+	background-image: linear-gradient(#6DD5FA, #2980B9);
+	grid-template-rows: 55px;
+	grid-template-areas: "navl navr";
+}
+#left{
+	padding: 10px;
+	grid-area: left;
+}
+#right {
+	display: grid;
+	padding: 10px;
+	grid-area: right;
+}
+
+#nav-left, #nav-right{
+	margin: 5px 0;
+	height: 40px
+	vertical-align: middle;
+}
+
+#nav-left{
+	grid-area: navl;
+	align-self: center;
+}
+
+#nav-right{
+	grid-area: navr;
+	align-self: center;
+	justify-self: end;
+	padding: 0 10px;	
+}
+
+#nav-left label{
+	padding: 5px 20px;
+	border-right: 1px solid white;
+}
+
+#nav-right label{
+	padding: 0 20px;
+}
+
+#nav-right button{
+	padding: 0 20px;
+	height: 40px;
+	border: 1px solid white	;
+	background: white;
+	color: gray;
+}
+
+#buttons{
+	justify-self: end;
+}
+
+#buttons button:nth-child(3){
+	width: 130px
+}
+
+#buttons button{
+	margin-left: 25px;
+}
+
