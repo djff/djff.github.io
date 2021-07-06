@@ -4,6 +4,10 @@ class Bank{
 		this._accounts = [];
 	}
 
+	getAccount(number){
+		return this._accounts.find(acc => acc.getNumber() === number);
+	}
+
 	addAccount(){
 		let account = new Account(Bank.nextNumber);
 		Bank.nextNumber += 543;
@@ -20,8 +24,8 @@ class Bank{
 
 	addCheckingAccount(){
 		let account = new CheckingAccount(Bank.nextNumber);
-		Bank.nextNumber += 228;
 		this._accounts.push(account);
+		Bank.nextNumber += 228;
 		return account.getNumber();
 	}
 
@@ -32,6 +36,13 @@ class Bank{
 
 	accountReport(){
 		this._accounts.forEach(acc => console.log(acc.toString()));
+		return null;
+	}
+
+	endOfMonth(){
+		let report = this._accounts.map(acc => acc.endOfMonth());
+		report.forEach(report => console.log(report));
+		return report;
 	}
 }
 

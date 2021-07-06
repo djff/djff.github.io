@@ -21,4 +21,10 @@ class SavingAccount extends Account{
 	toString(){
 		return "Saving Account " + this.getNumber() + ": balance " + this.getBalance();
 	}
+
+	endOfMonth() {
+		this.addInterest();
+        return "Interest added to SavingsAccount " + this.getNumber() +
+        ": balance: " + this.getBalance() + " interest: " + this._interest; // does nothing
+    }
 }

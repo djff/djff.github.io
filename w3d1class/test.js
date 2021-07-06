@@ -77,23 +77,47 @@ window.onload = function(){
 
 	// Test the bank class
 	let bank = new Bank();
+
 	describe("addAccount", function(){
 		it("Creates a new Account",function(){
-			assert.equal(11244, bank.addAccount());
+			let accNumber = bank.addAccount();
+			assert.equal(11244, accNumber);
 		});
 	});
 
 	describe("addSavingsAccount", function(){
 		it("Creates a new Savings Account",function(){
-			assert.equal(11787, bank.addSavingsAccount());
+			let savingNum = bank.addSavingsAccount();
+			let savingAcc = bank.getAccount(savingNum);
+			savingAcc.setInterest(2.5);
+			savingAcc.deposit(100);
+			assert.equal(11787, savingNum);
 		});
 	});
 
 	describe("addCheckingAccount", function(){
 		it("Creates a new Account",function(){
-			assert.equal(12020, bank.addCheckingAccount());
+			let checkNum = bank.addCheckingAccount();
+			let checkAcc = bank.getAccount(checkNum);
+			checkAcc.setOverdraft(500);
+			checkAcc.deposit(400);
+			checkAcc.withdraw(500);
+			assert.equal(12020, checkNum);
 		});
 	});
+
+	describe("accountReport", function(){
+		it("Creates a new Account",function(){
+			assert.equal(null, bank.accountReport());
+		});
+	});
+
+	describe("endOfMonth", function(){
+		it("Creates a new Account",function(){
+			assert.equal(3, bank.endOfMonth().length);
+		});
+	});
+
 
 	mocha.run();
 }
