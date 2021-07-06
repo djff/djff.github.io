@@ -79,14 +79,14 @@ window.onload = function(){
 	let bank = new Bank();
 
 	describe("addAccount", function(){
-		it("Creates a new Account",function(){
+		it("Creates a new Account from bank class",function(){
 			let accNumber = bank.addAccount();
 			assert.equal(11244, accNumber);
 		});
 	});
 
 	describe("addSavingsAccount", function(){
-		it("Creates a new Savings Account",function(){
+		it("Creates a new Savings Account from bank class",function(){
 			let savingNum = bank.addSavingsAccount();
 			let savingAcc = bank.getAccount(savingNum);
 			savingAcc.setInterest(2.5);
@@ -96,7 +96,7 @@ window.onload = function(){
 	});
 
 	describe("addCheckingAccount", function(){
-		it("Creates a new Account",function(){
+		it("Creates a new Checking account Account from bank class",function(){
 			let checkNum = bank.addCheckingAccount();
 			let checkAcc = bank.getAccount(checkNum);
 			checkAcc.setOverdraft(500);
