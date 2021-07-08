@@ -20,7 +20,6 @@ $(function(){
 			if(GAME_STATE_PLAYING){
 				GAME_STATE_PLAYING = false;
 				$("#status").text('You win!! Click the "S" to continue.');
-				$("#status").text('Sorry, you lost, :[, Click the "S" to continue.');
 			}
 		})
 
