@@ -1,5 +1,6 @@
 $(function(){
 
+	"use strict";
 	$("#start").click(function(){
 		const BODY_WIDTH = parseInt($("#container").css("width"));
 		const BODY_HEIGHT = parseInt($("#container").css("height"));
