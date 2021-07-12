@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Products</title>
+    </head>
+    <body>
+        <ul>
+            <% for(let i=0; i<cart.length; i++) {
+                %> 
+                    <%product=cart[i].product;%>
+                    <li>
+                        <label><%=product.getName()%> 
+                            <span>,  quantity: <%=cart[i].quantity%></span>
+                        </label>
+                    </li>
+                    <ul>
+                        <li><%=product.getPrice()%></li>
+                        <li><%=product.getDescription()%></li>
+                    </ul>
+                <%    
+            }
+            %>
+        </ul>
+    </body>
+</html>
